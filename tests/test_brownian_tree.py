@@ -26,7 +26,7 @@ import torch
 from scipy.stats import norm, kstest
 
 import pytest
-import torchsde
+import torchsde_brownian as torchsde
 
 torch.manual_seed(0)
 torch.set_default_dtype(torch.float64)

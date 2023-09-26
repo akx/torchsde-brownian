@@ -24,38 +24,8 @@ class ContainerMeta(type):
         return item in cls.all()
 
 
-# TODO: consider moving all these enums into some appropriate section of the code, rather than having them be global
-#  like this. (e.g. instead set METHODS = {'euler': Euler, ...} in methods/__init__.py)
-class METHODS(metaclass=ContainerMeta):
-    euler = 'euler'
-    milstein = 'milstein'
-    srk = 'srk'
-    midpoint = 'midpoint'
-    reversible_heun = 'reversible_heun'
-    adjoint_reversible_heun = 'adjoint_reversible_heun'
-    heun = 'heun'
-    log_ode_midpoint = 'log_ode'
-    euler_heun = 'euler_heun'
-
-
-class NOISE_TYPES(metaclass=ContainerMeta):  # noqa
-    general = 'general'
-    diagonal = 'diagonal'
-    scalar = 'scalar'
-    additive = 'additive'
-
-
-class SDE_TYPES(metaclass=ContainerMeta):  # noqa
-    ito = 'ito'
-    stratonovich = 'stratonovich'
-
-
 class LEVY_AREA_APPROXIMATIONS(metaclass=ContainerMeta):  # noqa
     none = 'none'  # Don't compute any Levy area approximation
     space_time = 'space-time'  # Only compute an (exact) space-time Levy area
     davie = 'davie'  # Compute Davie's approximation to Levy area
     foster = 'foster'  # Compute Foster's correction to Davie's approximation to Levy area
-
-
-class METHOD_OPTIONS(metaclass=ContainerMeta):  # noqa
-    grad_free = 'grad_free'

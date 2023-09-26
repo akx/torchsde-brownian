@@ -20,8 +20,8 @@ import numpy as np
 import torch
 
 from . import brownian_base
-from ..settings import LEVY_AREA_APPROXIMATIONS
-from ..types import Scalar, Optional, Tuple, Union, Tensor
+from torchsde_brownian.settings import LEVY_AREA_APPROXIMATIONS
+from torchsde_brownian.types import Scalar, Optional, Tuple, Union, Tensor
 
 _rsqrt3 = 1 / math.sqrt(3)
 _r12 = 1 / 12

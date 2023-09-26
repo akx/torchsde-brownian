@@ -26,7 +26,7 @@ import numpy.random as npr
 import torch
 from scipy.stats import norm, kstest
 
-import torchsde
+import torchsde_brownian as torchsde
 import pytest
 
 torch.manual_seed(1147481649)
