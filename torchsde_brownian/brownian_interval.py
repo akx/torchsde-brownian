@@ -13,15 +13,15 @@
 # limitations under the License.
 
 import math
-import trampoline
 import warnings
 
 import numpy as np
 import torch
+import trampoline
 
-from . import brownian_base
-from ..settings import LEVY_AREA_APPROXIMATIONS
-from ..types import Scalar, Optional, Tuple, Union, Tensor
+from torchsde_brownian import brownian_base
+from torchsde_brownian.settings import LEVY_AREA_APPROXIMATIONS
+from torchsde_brownian.types import Optional, Scalar, Tensor, Tuple, Union
 
 _rsqrt3 = 1 / math.sqrt(3)
 _r12 = 1 / 12

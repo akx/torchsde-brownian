@@ -22,11 +22,11 @@ sys.path = sys.path[1:]  # A hack so that we always import the installed library
 
 import numpy as np
 import numpy.random as npr
-import torch
-from scipy.stats import norm, kstest
-
 import pytest
-import torchsde
+import torch
+from scipy.stats import kstest, norm
+
+import torchsde_brownian as torchsde
 
 torch.manual_seed(0)
 torch.set_default_dtype(torch.float64)

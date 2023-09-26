@@ -21,12 +21,13 @@ import sys
 sys.path = sys.path[1:]  # A hack so that we always import the installed library.
 
 import math
+
 import numpy.random as npr
+import pytest
 import torch
 from scipy.stats import kstest
 
-import pytest
-import torchsde
+import torchsde_brownian as torchsde
 
 torch.manual_seed(1147481649)
 torch.set_default_dtype(torch.float64)

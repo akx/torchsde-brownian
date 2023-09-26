@@ -12,16 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from ._brownian import (BaseBrownian, BrownianInterval, BrownianPath, BrownianTree, ReverseBrownian,
-                        brownian_interval_like)
-from ._core.adjoint import sdeint_adjoint
-from ._core.base_sde import BaseSDE, SDEIto, SDEStratonovich
-from ._core.sdeint import sdeint
+# We import from `typing` more than what's enough, so that other modules can import from this file and not `typing`.
+from typing import Any, Callable, Dict, Optional, Sequence, Tuple, Union  # noqa: F401
 
-BrownianInterval.__init__.__annotations__ = {}
-BrownianPath.__init__.__annotations__ = {}
-BrownianTree.__init__.__annotations__ = {}
-sdeint.__annotations__ = {}
-sdeint_adjoint.__annotations__ = {}
+import torch
 
-__version__ = '0.2.5'
+Tensor = torch.Tensor
+Tensors = Sequence[Tensor]
+TensorOrTensors = Union[Tensor, Tensors]
+
+Scalar = Union[float, Tensor]
+Vector = Union[Sequence[float], Tensor]
+
+Module = torch.nn.Module
+Modules = Sequence[Module]
+ModuleOrModules = Union[Module, Modules]
+
+Size = torch.Size
+Sizes = Sequence[Size]
