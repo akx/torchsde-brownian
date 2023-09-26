@@ -14,7 +14,7 @@
 
 from torchsde_brownian.brownian_base import BaseBrownian
 from torchsde_brownian.brownian_interval import BrownianInterval
-from torchsde_brownian.derived import ReverseBrownian, BrownianPath, BrownianTree, brownian_interval_like
+from torchsde_brownian.derived import BrownianPath, BrownianTree, ReverseBrownian, brownian_interval_like
 
 BrownianInterval.__init__.__annotations__ = {}
 BrownianPath.__init__.__annotations__ = {}

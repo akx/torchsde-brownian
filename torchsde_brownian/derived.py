@@ -14,8 +14,7 @@
 
 import torch
 
-from . import brownian_base
-from . import brownian_interval
+from torchsde_brownian import brownian_base, brownian_interval
 from torchsde_brownian.types import Optional, Scalar, Tensor, Tuple, Union
 
 
